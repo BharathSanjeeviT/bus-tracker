@@ -21,7 +21,7 @@ const Home = () => {
             setNotify(false)
             if(status === "sucess"){
                 localStorage.setItem("user",reg)
-                router.push('/home')
+                router.push('/map')
             }
         },2000)
         return () => clearTimeout(timer)
@@ -74,7 +74,7 @@ const Home = () => {
                     <button type='submit' className="w-32 px-3 py-2 font-bold text-black bg-transparent border-2 border-black transition-all rounded-md hover:bg-black hover:text-white">
                     {spinner ?
                     <div className="flex items-center justify-center h-6">
-                        <div className="animate-spin inline-block w-6 h-6 border-[3px] border-current border-t-transparent text-black rounded-full">
+                        <div className="animate-spin inline-block w-6 h-6 border-[3px] border-current border-t-transparent text-black rounded-full hover:text-white">
                         <span className="sr-only">Loading...</span>
                         </div>
                      </div> :
